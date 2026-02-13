@@ -122,14 +122,29 @@ export default function App() {
     }, 2000);
   };
 
+  const backgrounds = {
+    start: 'linear-gradient(to bottom, #3c0176, #2d0060, #120031, black)',
+    flying: 'linear-gradient(to bottom, #3c0176, #2d0060, #120031, black)',
+    hub: 'linear-gradient(to bottom, #1a0033, #0d001a, black)',
+    rose: 'linear-gradient(to bottom, #4a0404, #2a0202, black)', // Deep Red
+    propose: 'linear-gradient(to bottom, #051020, #020814, black)', // Midnight Blue
+    chocolate: 'linear-gradient(to bottom, #3d1d11,#1a0b05, #1a0b05,black, black)', // Warm Brown
+    hug: 'linear-gradient(to bottom, #2e474a, #162525, #162525, #162525,black, black)', // Hug Teal
+    kiss: 'linear-gradient(to bottom, #180130, #0a021a,#1a0202, black, black)', // Kiss Red
+  };
+
   // Helper to determine if we should show background trees
   // Hide trees if we are in a specific game mode
   const showBackground = stage !== 'rose' && stage !== 'propose' && stage !== 'chocolate' && stage !== 'teddy' && stage !== 'promise' && stage !== 'hug' && stage !== 'kiss' && stage !== 'valentine';
 
   return (
-    <div style={{ backgroundColor: '#2f0081', width: '100vw', height: '100vh' }}>
+    <div style={{ 
+      background: backgrounds[stage] || 'black', 
+      width: '100vw', 
+      height: '100vh',
+      transition: 'background 1.5s ease' // Smooth transition between days!
+    }}>
       <Canvas 
-        style={{ background: 'linear-gradient(to bottom, #3c0176, #2d0060, #120031, black,black,black)' }} 
         gl={{ alpha: true, antialias: true }}  
         shadows 
         camera={{ position: [0, 2, 12], fov: 50 }} 
