@@ -98,7 +98,7 @@ function HeroDoor({ onEnter, isOpen }) {
 }
 
 // --- MODEL WRAPPER ---$
-useGLTF.preload('3d/tree_gn.glb');
+useGLTF.preload('3d/tree-gn.glb');
 useGLTF.preload('3d/tree.glb');
 useGLTF.preload('3d/tree-1.glb');
 useGLTF.preload('3d/plants.glb');
@@ -220,9 +220,9 @@ export default function App() {
         {/* --- BACKGROUND TREES --- */}
         {showBackground && (
           <Suspense fallback={null}>
-            <ModelWrapper path="3d/tree_gn.glb" position={[-9, 0, 0]} scale={0.35} rotation={[0, 1, 0]} />
+            <ModelWrapper path="3d/tree-gn.glb" position={[-9, 0, 0]} scale={0.35} rotation={[0, 1, 0]} />
 <ModelWrapper path="3d/tree.glb" position={[4, -3.5, -2]} scale={40} rotation={[0, 6, 0]} />
-<ModelWrapper path="3d/tree_gn.glb" position={[9, -2, -2]} scale={0.35} rotation={[0, 1, 0]} />
+<ModelWrapper path="3d/tree-gn.glb" position={[9, -2, -2]} scale={0.35} rotation={[0, 1, 0]} />
 <ModelWrapper path="3d/tree.glb" position={[-4, -3, -3]} scale={30} rotation={[0, 1, 0]} />
 <ModelWrapper path="3d/tree.glb" position={[5, -2, -5]} scale={35} rotation={[0, 1, 0]} />
 <ModelWrapper path="3d/tree.glb" position={[-10, -2.5, -4]} scale={35} rotation={[0, 1, 0]} />
