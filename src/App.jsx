@@ -34,7 +34,7 @@ function CameraFlythrough({ start }) {
 // --- COMPONENT: Hero Door ---
 function HeroDoor({ onEnter, isOpen }) {
   const [hovered, setHovered] = useState(false);
-   const archTexture = useTexture('images/arch.png');
+   // const archTexture = useTexture('images/arch.png');
   const leftDoorTex = useTexture('images/leftdoor.png');
   const rightDoorTex = useTexture('images/rightdoor.png');
   const leftDoor = useRef();
@@ -49,11 +49,7 @@ function HeroDoor({ onEnter, isOpen }) {
   });
 
   return (
-    <group position={[0, 0, 0]}>
-      <mesh position={[0, 0.8, -0.1]}>
-        <planeGeometry args={[8, 8]} />
-        <meshStandardMaterial map={archTexture} transparent={true} alphaTest={0.5} />
-      </mesh>
+    
       <group position={[-2.2, 0.8, -0.2]} ref={leftDoor}>
         <mesh position={[1, 0, 0]}>
           <planeGeometry args={[2.9, 6.4]} />
