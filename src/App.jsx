@@ -12,9 +12,6 @@ import PromiseDay from './PromiseDay'; // <--- IMPORT THIS
 import HugDay from './HugDay';
 import KissDay from './KissDay';
 import ValentineDay from './ValentinesDay';
-import {arch} from '../public/images/arch.png';
-import {leftdoor} from '../public/images/leftdoor.png';
-import {rightdoor} from '../public/images/rightdoor.png';
 
 // ... [Keep CameraFlythrough, HeroDoor, ModelWrapper components EXACTLY as they are] ...
 // (I am omitting them here to save space, but DO NOT delete them from your file)
