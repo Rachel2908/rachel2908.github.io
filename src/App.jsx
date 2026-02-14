@@ -37,9 +37,9 @@ function CameraFlythrough({ start }) {
 // --- COMPONENT: Hero Door ---
 function HeroDoor({ onEnter, isOpen }) {
   const [hovered, setHovered] = useState(false);
-  const archTexture = useTexture(`{import.meta.env.BASE_URL}images/arch.png`);
-  const leftDoorTex = useTexture(`{import.meta.env.BASE_URL}images/leftdoor.png`);
-  const rightDoorTex = useTexture(`{import.meta.env.BASE_URL}images/rightdoor.png`);
+  const archTexture = useTexture(`${import.meta.env.BASE_URL}images/arch.png`);
+  const leftDoorTex = useTexture(`${import.meta.env.BASE_URL}images/leftdoor.png`);
+  const rightDoorTex = useTexture(`${import.meta.env.BASE_URL}images/rightdoor.png`);
   const leftDoor = useRef();
   const rightDoor = useRef()
 
@@ -100,12 +100,12 @@ function HeroDoor({ onEnter, isOpen }) {
   );
 }
 
-// --- MODEL WRAPPER ---
-useGLTF.preload('3d/tree_gn.glb');
-useGLTF.preload('3d/tree.glb');
-useGLTF.preload('3d/tree (1).glb');
-useGLTF.preload('3d/plants.glb');
-useGLTF.preload('3d/small_folliage_plant.glb');
+// --- MODEL WRAPPER ---$
+useGLTF.preload(`${import.meta.env.BASE_URL}3d/tree_gn.glb`);
+useGLTF.preload(`${import.meta.env.BASE_URL}3d/tree.glb`);
+useGLTF.preload(`${import.meta.env.BASE_URL}3d/tree (1).glb`);
+useGLTF.preload(`${import.meta.env.BASE_URL}3d/plants.glb`);
+useGLTF.preload(`${import.meta.env.BASE_URL}3d/small_folliage_plant.glb`);
 
 function ModelWrapper({ path, position, scale, rotation }) {
   const { scene } = useGLTF(path);
@@ -223,19 +223,19 @@ export default function App() {
         {/* --- BACKGROUND TREES --- */}
         {showBackground && (
           <Suspense fallback={null}>
-            <ModelWrapper path='3d/tree_gn.glb' position={[-9, 0, 0]} scale={0.35} rotation={[0, 1, 0]} />
-            <ModelWrapper path='3d/tree.glb' position={[4, -3.5, -2]} scale={40} rotation={[0, 6, 0]} />
-            <ModelWrapper path='3d/tree_gn.glb' position={[9, -2, -2]} scale={0.35} rotation={[0, 1, 0]} />
-            <ModelWrapper path='3d/tree.glb' position={[-4, -3, -3]} scale={30} rotation={[0, 1, 0]} />
-            <ModelWrapper path='3d/tree.glb' position={[5, -2, -5]} scale={35} rotation={[0, 1, 0]} />
-            <ModelWrapper path='3d/tree.glb' position={[-10, -2.5, -4]} scale={35} rotation={[0, 1, 0]} />
-            <ModelWrapper path='3d/tree (1).glb' position={[-6, -4, 5]} scale={0.01} rotation={[0, 0, 0]} />
-            <ModelWrapper path='3d/tree (1).glb' position={[7, -3.5, 4]} scale={0.007} rotation={[0, 1, 0]} />
-            <ModelWrapper path='3d/plants.glb' position={[-4.5, -2.5, -2]} scale={0.002} rotation={[0, 1, 0]} />
-            <ModelWrapper path='3d/plants.glb' position={[2.8, -3, -1]} scale={0.002} rotation={[0, 1, 0]} />
-            <ModelWrapper path='3d/plants.glb' position={[3.8, -2, -1]} scale={0.0013} rotation={[0, 1, 0]} />
-            <ModelWrapper path='3d/plants.glb' position={[-2.8, -2.4, -2.5]} scale={0.001} rotation={[0, 1, 0]} />
-            <ModelWrapper path='3d/small_folliage_plant.glb' position={[7, 1, -1]} scale={0.7} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`$${import.meta.env.BASE_URL}3d/tree_gn.glb`} position={[-9, 0, 0]} scale={0.35} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree.glb`} position={[4, -3.5, -2]} scale={40} rotation={[0, 6, 0]} />
+            <ModelWrapper path={`$${import.meta.env.BASE_URL}3d/tree_gn.glb`} position={[9, -2, -2]} scale={0.35} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree.glb`} position={[-4, -3, -3]} scale={30} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree.glb`} position={[5, -2, -5]} scale={35} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree.glb`} position={[-10, -2.5, -4]} scale={35} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree (1).glb`} position={[-6, -4, 5]} scale={0.01} rotation={[0, 0, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree (1).glb`} position={[7, -3.5, 4]} scale={0.007} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/plants.glb`} position={[-4.5, -2.5, -2]} scale={0.002} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/plants.glb`} position={[2.8, -3, -1]} scale={0.002} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/plants.glb`}position={[3.8, -2, -1]} scale={0.0013} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/plants.glb`} position={[-2.8, -2.4, -2.5]} scale={0.001} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/small_folliage_plant.glb`} position={[7, 1, -1]} scale={0.7} rotation={[0, 1, 0]} />
           </Suspense>
         )}
         
