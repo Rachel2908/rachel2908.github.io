@@ -12,6 +12,9 @@ import PromiseDay from './PromiseDay'; // <--- IMPORT THIS
 import HugDay from './HugDay';
 import KissDay from './KissDay';
 import ValentineDay from './ValentinesDay';
+import {arch} from '../public/images/arch.png';
+import {leftdoor} from '../public/images/leftdoor.png';
+import {rightdoor} from '../public/images/rightdoor.png';
 
 // ... [Keep CameraFlythrough, HeroDoor, ModelWrapper components EXACTLY as they are] ...
 // (I am omitting them here to save space, but DO NOT delete them from your file)
@@ -34,9 +37,9 @@ function CameraFlythrough({ start }) {
 // --- COMPONENT: Hero Door ---
 function HeroDoor({ onEnter, isOpen }) {
   const [hovered, setHovered] = useState(false);
-  const archTexture = useTexture('images/arch.png');
-  const leftDoorTex = useTexture('images/leftdoor.png');
-  const rightDoorTex = useTexture('images/rightdoor.png');
+  const archTexture = useTexture({arch});
+  const leftDoorTex = useTexture({leftdoor});
+  const rightDoorTex = useTexture({rightdoor});
   const leftDoor = useRef();
   const rightDoor = useRef()
 
