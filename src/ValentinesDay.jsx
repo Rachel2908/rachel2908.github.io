@@ -7,12 +7,12 @@ import { useSpring, animated, config } from '@react-spring/three';
 
 // --- CONFIGURATION: YOUR MEMORIES ---
 const MEMORIES = [
-  "/images/1.jpg", 
-  "/images/7.jpg", 
-  "/images/3.jpg", 
-  "/images/4.jpg", 
-  "/images/5.jpg", 
-  "/images/2.jpg", 
+  "images/1.jpg", 
+  "images/7.jpg", 
+  "images/3.jpg", 
+  "images/4.jpg", 
+  "images/5.jpg", 
+  "images/2.jpg", 
 ];
 
 // --- COMPONENT: Firework Explosion ---
@@ -190,7 +190,7 @@ export default function ValentineDay({ onBack }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isCelebrated, setIsCelebrated] = useState(false);
   
-  const audioRef = useRef(new Audio('/love.mp3')); 
+  const audioRef = useRef(new Audio('love.mp3')); 
 
   useEffect(() => {
     const audio = audioRef.current;

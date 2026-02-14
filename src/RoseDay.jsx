@@ -5,7 +5,7 @@ import * as THREE from 'three';
 
 // --- COMPONENT: The Rose Model with "Bud" Logic ---
 function RoseModel({ bloomProgress, onClick }) {
-  const { scene } = useGLTF('/3d/rose.glb'); 
+  const { scene } = useGLTF('3d/rose.glb'); 
   const roseRef = useRef();
 
   // Clone the scene
@@ -52,7 +52,7 @@ const targetScaleZ = 0.1 + (bloomProgress * 2.9); // Ends at 2.0
 }
 
 // Preload
-useGLTF.preload('/3d/rose.glb');
+useGLTF.preload('3d/rose.glb');
 
 // --- COMPONENT: Particles ---
 function PetalExplosion() {

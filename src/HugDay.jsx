@@ -156,7 +156,7 @@ export default function HugDay({ onBack }) {
       {/* --- CHARACTERS (Responsive Group) --- */}
       <group scale={characterScale}>
           <Hugger 
-            image="/images/face2.png" // Replace with "/face1.png"
+            image="images/face2.png" // Replace with "/face1.png"
             color={GIRL_COLOR} 
             startX={-responsiveX} // <--- Dynamic X
             isLeft={true} 
@@ -165,7 +165,7 @@ export default function HugDay({ onBack }) {
           />
           
           <Hugger 
-            image="/images/face1.png" // Replace with "/face2.png"
+            image="images/face1.png" // Replace with "/face2.png"
             color={BOY_COLOR} 
             startX={responsiveX} // <--- Dynamic X
             isLeft={false} 

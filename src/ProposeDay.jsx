@@ -34,7 +34,7 @@ import * as THREE from 'three';
 // }
 
 function LakeWater() {
-    const { scene, animations } = useGLTF('/3d/wave-v1.glb');
+    const { scene, animations } = useGLTF('3d/wave-v1.glb');
     const { actions } = useAnimations(animations, scene);
     const waveRef = useRef();
 
@@ -63,7 +63,7 @@ function LakeWater() {
     );
 }
 
-useGLTF.preload('/3d/wave-v1.glb');
+useGLTF.preload('3d/wave-v1.glb');
 
 // --- COMPONENT: The Bottle & Cork ---
 function MessageBottle({ onOpen, isOpen }) {
