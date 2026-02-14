@@ -19,16 +19,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
-      - name: Install & Build
+
+      - name: Clean Install & Build
         run: |
-          npm install
+          # 1. Use 'ci' instead of 'install' for a clean, consistent build
+          npm ci 
+          # 2. Run the build
           npm run build
+          # 3. Create the 404 fallback for GitHub Pages
           cp dist/index.html dist/404.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
