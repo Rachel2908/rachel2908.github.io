@@ -37,9 +37,9 @@ function CameraFlythrough({ start }) {
 // --- COMPONENT: Hero Door ---
 function HeroDoor({ onEnter, isOpen }) {
   const [hovered, setHovered] = useState(false);
-  const archTexture = useTexture({arch});
-  const leftDoorTex = useTexture({leftdoor});
-  const rightDoorTex = useTexture({rightdoor});
+  const archTexture = useTexture(`{import.meta.env.BASE_URL}images/arch.png`);
+  const leftDoorTex = useTexture(`{import.meta.env.BASE_URL}images/leftdoor.png`);
+  const rightDoorTex = useTexture(`{import.meta.env.BASE_URL}images/rightdoor.png`);
   const leftDoor = useRef();
   const rightDoor = useRef()
 
