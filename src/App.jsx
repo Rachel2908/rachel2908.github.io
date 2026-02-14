@@ -99,7 +99,7 @@ function HeroDoor({ onEnter, isOpen }) {
 
 // --- MODEL WRAPPER ---$
 useGLTF.preload(`${import.meta.env.BASE_URL}3d/tree_gn.glb`);
-// useGLTF.preload(`${import.meta.env.BASE_URL}3d/tree.glb`);
+useGLTF.preload(`${import.meta.env.BASE_URL}3d/tree.glb`);
 useGLTF.preload(`${import.meta.env.BASE_URL}3d/tree (1).glb`);
 useGLTF.preload(`${import.meta.env.BASE_URL}3d/plants.glb`);
 useGLTF.preload(`${import.meta.env.BASE_URL}3d/small_folliage_plant.glb`);
@@ -220,10 +220,10 @@ export default function App() {
         {/* --- BACKGROUND TREES --- */}
         {showBackground && (
           <Suspense fallback={null}>
-            <ModelWrapper path={`$${import.meta.env.BASE_URL}3d/tree_gn.glb`} position={[-9, 0, 0]} scale={0.35} rotation={[0, 1, 0]} />
-            {/* <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree.glb`} position={[4, -3.5, -2]} scale={40} rotation={[0, 6, 0]} /> */}
-            <ModelWrapper path={`$${import.meta.env.BASE_URL}3d/tree_gn.glb`} position={[9, -2, -2]} scale={0.35} rotation={[0, 1, 0]} />
-            {/* <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree.glb`} position={[-4, -3, -3]} scale={30} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree_gn.glb`} position={[-9, 0, 0]} scale={0.35} rotation={[0, 1, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree.glb`} position={[4, -3.5, -2]} scale={40} rotation={[0, 6, 0]} />
+            <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree_gn.glb`} position={[9, -2, -2]} scale={0.35} rotation={[0, 1, 0]} />
+             <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree.glb`} position={[-4, -3, -3]} scale={30} rotation={[0, 1, 0]} />
             <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree.glb`} position={[5, -2, -5]} scale={35} rotation={[0, 1, 0]} />
             <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree.glb`} position={[-10, -2.5, -4]} scale={35} rotation={[0, 1, 0]} /> */}
             <ModelWrapper path={`${import.meta.env.BASE_URL}3d/tree (1).glb`} position={[-6, -4, 5]} scale={0.01} rotation={[0, 0, 0]} />
